@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkpoint 3 - Vitrine de produtos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .produto {
+            background-color: white;
+            width: 320px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        img {
+            width: 250px;
+            height: 230px;
+        }
+
+        button {
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Checkpoint 3 - Vitrine de produtos</h1>
+
+    <div class="produto">
+        <h2>Produto da vez</h2>
+        <img id="imagemProduto" src="imagens/fone.svg" alt="Fone de ouvido preto">
+        <p>Veja outro produto da loja clicando no botão.</p>
+        <button onclick="trocarProduto()">Trocar produto</button>
+    </div>
+
+    <script>
+        function trocarProduto() {
+            const imagem = document.getElementById("imagemProduto");
+
+            if (imagem.getAttribute("src") === "imagens/fone.svg") {
+                imagem.setAttribute("src", "imagens/caixa-de-som.svg");
+                imagem.setAttribute("alt", "Caixa de som azul");
+            } else {
+                imagem.setAttribute("src", "imagens/fone.svg");
+                imagem.setAttribute("alt", "Fone de ouvido preto");
+            }
+        }
+    </script>
+</body>
+</html>
