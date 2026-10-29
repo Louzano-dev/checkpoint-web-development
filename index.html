@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placar do jogo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #pontos {
+            font-size: 60px;
+        }
+
+        button {
+            padding: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Placar do jogo</h1>
+        <p id="pontos">0</p>
+
+        <button onclick="adicionarPonto()">Adicionar ponto</button>
+        <button onclick="retirarPonto()">Retirar ponto</button>
+    </div>
+
+    <script>
+        let pontuacao = 0;
+
+        function adicionarPonto() {
+            pontuacao++;
+            document.getElementById("pontos").innerText = pontuacao;
+        }
+
+        function retirarPonto() {
+            if (pontuacao === 0) {
+                return;
+            }
+
+            pontuacao--;
+            document.getElementById("pontos").innerText = pontuacao;
+        }
+    </script>
+</body>
+</html>
